@@ -44,11 +44,11 @@
     .sidebar {
       position: fixed; top: 70px; right: -300px; width: 300px; height: calc(100% - 70px);
       background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
-      transition: left 0.28s ease; overflow-y: auto; z-index: 999; padding: 16px;
-      box-shadow: 4px 0 15px rgba(0, 0, 0, 0.12); border-right: 1px solid rgba(0,0,0,0.03);
+      transition: right 0.28s ease; overflow-y: auto; z-index: 999; padding: 16px;
+      box-shadow: 4px 0 15px rgba(0, 0, 0, 0.12); border-left: 1px solid rgba(0,0,0,0.03);
     }
     .sidebar.open { 
-      right: 0px; 
+      right: 0px;  
     }
     .sidebar h2 { 
       font-family: 'Playfair Display', serif; 
@@ -97,10 +97,3 @@
     .leaflet-popup-content .popup-title { font-weight:700; margin-bottom:6px; }
     .leaflet-popup-content .popup-description { margin-bottom:6px; color:#444; font-size:0.95rem; }
     .leaflet-popup-content .popup-info { color:#666; font-size:0.9rem; }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .sidebar { width: 86%; left: -100%; }
-      .sidebar.open { left: 0; }
-      .menu-btn { font-size: 1.1rem; }
-    }
