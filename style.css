@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('winter.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+html, body { height: 100%; }          /* base obligatoria */
+.container { height: calc(100vh - 120px); } /* ya lo tenías, dejalo así */
+#map        { height: 100%; }          /* ← importante: 100 % del padre */
+@keyframes snow {
+    0% { background-position: 0 0; }
+    100% { background-position: 500px 1000px; }
+}
+.header {
+    background: rgba(255, 255, 255, 0.147);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+.container {
+    display: flex;
+    height: calc(100vh - 120px);
+    gap: 20px;
+    padding: 20px;
+}
+.sidebar {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+.sidebar h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+.poi-item, .food-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+.toggle-xmas {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-xmas input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  width: 45px;
+  inset: 0;
+  background: #c5d3f0;
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-xmas input:checked + .slider {
+  background: #5d93ef;
+}
+
+.toggle-xmas input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.food-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid #ea6666;
+}
+.poi-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+.poi-item:hover, .food-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+    background: white;
+}
+.food-item h3 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+.food-item p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.food-item i {
+    color: #ea6666;
+    margin-right: 8px;
+}
+.poi-item h3 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+.poi-item p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.poi-item i {
+    color: #667eea;
+    margin-right: 8px;
+}
+.map-container {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.leaflet-popup-content {
+    font-family: 'Inter', sans-serif;
+    margin: 15px;
+}
+.popup-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+.popup-description {
+    color: #7f8c8d;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.popup-info {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #495057;
+}
+.check{
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+/* ----------  MÓVIL  ---------- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+  .sidebar {
+    width: 100%;
+    height: 40vh;          /* se puede scrollar internamente */
+    padding: 15px;
+  }
+  .map-container {
+    height: 50vh;          /* el mapa ocupa la mitad restante */
+    border-radius: 12px;
+  }
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  .poi-item,
+  .food-item {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  /* toggle más grande para dedos */
+  .toggle-xmas {
+    width: 48px;
+    height: 26px;
+  }
+  .slider::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Evita zoom automático en inputs iOS */
+input.check {
+  font-size: 16px;
+}
