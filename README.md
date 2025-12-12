@@ -1,2 +1,0 @@
-# London
-london trip
