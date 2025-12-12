@@ -11,489 +11,361 @@
     <link rel="icon" type="image/avif" href="assets/winter.avif">
 </head>
 <body>
-    <div class="header">
-        <h1><i class="fas fa-map-marked-alt"></i> London Visit </h1>
-        <p>Visita del 19/12/2025 al 22/12/2025 by Maider and Lucia</p>
+  <div class="header">
+    <div style="display:flex;align-items:center;">
+      <h1><i class="fas fa-map-marked-alt"></i> London Visit</h1>
+      <p style="margin-left:8px;">Visita del 19/12/2025 al 22/12/2025 — Maider & Lucía</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="menu-btn" id="btnMenu" aria-label="abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <h2><i class="fas fa-star"></i> Puntos de Interés</h2>
+
+    <!-- NOTA: data-type = 'poi' y data-index corresponde al índice 0-based en pointsOfInterest -->
+    <div class="poi-item" onclick="focusOnMarker(10)">
+      <div>
+        <h3><i class="fas fa-bed"></i> Stay at Safestay London Elephant & Castle</h3>
+        <p>Alojamiento económico y moderno en el corazón de Londres.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="10">
+        <span class="slider"></span>
+      </label>
     </div>
 
-    <div class="container">
-        <div class="sidebar">
-            <h2><i class="fas fa-star"></i> Puntos de Interés</h2>
-            
-            <div class="poi-item">
-                <span onclick="focusOnMarker(10)">
-                    <h3><i class="fas fa-bed"></i> Stay at Safestay London Elephant & Castle</h3>
-                    <p>Alojamiento económico y moderno en el corazón de Londres, ideal para viajeros jóvenes.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="0">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="poi-item">
-                <span onclick="focusOnMarker(0)">
-                    <h3><i class="fas fa-crown"></i> Palacio de Buckingham</h3>
-                    <p>Residencia oficial de la monarquía británica. No te pierdes el cambio de guardia.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="1">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(1)">
-                    <h3><i class="fas fa-clock"></i> Big Ben y el Parlamento</h3>
-                    <p>El icónico reloj de Londres y sede del gobierno británico.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="2">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="poi-item">
-                <span onclick="focusOnMarker(2)">
-                    <h3><i class="fas fa-place-of-worship"></i> Torre de Londres</h3>
-                    <p>Fortaleza histórica y prisión real, hogar de las joyas de la corona.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="3">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(3)">
-                    <h3><i class="fas fa-bridge"></i> Tower Bridge</h3>
-                    <p>Puente levadizo más famoso del mundo con vistas espectaculares.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="4">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="poi-item">
-                <span onclick="focusOnMarker(4)">
-                    <h3><i class="fas fa-museum"></i> Museo Británico</h3>
-                    <p>Tesoros de la historia mundial, incluyendo los restos de la antigua Grecia y Egipto.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="5">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(11)">
-                    <h3><i class="fas fa-tree"></i> Natural History Museum</h3>
-                    <p>Museo dedicado a la historia natural, famoso por su colección de dinosaurios.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="11">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(5)">
-                    <h3><i class="fas fa-shopping-bag"></i> Harrods</h3>
-                    <p>El centro comercial más lujoso de Londres, una experiencia única.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="6">
-                    <span class="slider"></span>
-                </label>
-                </div>
-            <div class="poi-item">
-                <span onclick="focusOnMarker(6)">
-                    <h3><i class="fas fa-theater-masks"></i> Shakespeare's Globe</h3>
-                    <p>Teatro reconstruido al estilo original de la época isabelina.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="7">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(7)">
-                    <h3><i class="fas fa-eye"></i> London Eye</h3>
-                    <p>Noria gigante con vistas panorámicas de 360° de toda la ciudad.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="8">
-                    <span class="slider"></span>
-                </label>
-                </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(8)">
-                    <h3><i class="fas fa-cathedral"></i> Catedral de San Pablo</h3>
-                    <p>Obra maestra de la arquitectura barroca con su cúpula icónica.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="9">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="poi-item">
-                <span onclick="focusOnMarker(9)">
-                    <h3><i class="fas fa-water"></i> Camden Lock</h3>
-                    <p>Canal histórico con mercado alternativo y vibrante escena musical.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="10">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="food-item">
-                <span onclick="focusOnFoodMarker(0)">
-                    <h3><i class="fas fa-utensils"></i> Camden Market</h3>
-                    <p>Variedad de puestos de comida internacional y opciones veganas.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="100">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="food-item">
-                <span onclick="focusOnFoodMarker(1)">
-                    <h3><i class="fas fa-hamburger"></i> Kung Fu Burger</h3>
-                    <p>Hamburguesas con opciones vegetarianas y veganas cerca de la Torre de Londres.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="101">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="food-item">
-                <span onclick="focusOnFoodMarker(2)">
-                    <h3><i class="fas fa-drumstick-bite"></i> JI chicken shop</h3>
-                    <p>Pollo frito estilo coreano con opciones vegetarianas en London Bridge.</p>
-                </span>
-                <label class="toggle-xmas">
-                    <input type="checkbox" class="check" data-index="102">
-                    <span class="slider"></span>
-                </label>
-            </div>
-        </div>
-
-        <div class="map-container">
-            <div id="map"></div>
-        </div>
+    <div class="poi-item" onclick="focusOnMarker(0)">
+      <div>
+        <h3><i class="fas fa-crown"></i> Palacio de Buckingham</h3>
+        <p>Residencia oficial de la monarquía británica.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="0">
+        <span class="slider"></span>
+      </label>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Inicializar el mapa centrado en Londres
-        const map = L.map('map').setView([51.5074, -0.1278], 12);
+    <div class="poi-item" onclick="focusOnMarker(1)">
+      <div>
+        <h3><i class="fas fa-clock"></i> Big Ben y el Parlamento</h3>
+        <p>El icónico reloj de Londres y sede del gobierno británico.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="1">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        const christmasIcon = L.divIcon({
-            html: '<div style="background: #e63946; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(230, 57, 70, 0.5);"><i class="fas fa-gift"></i></div>',
-            className: 'custom-marker',
-            iconSize: [30, 30]
-        });
-        // Añadir capa de tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
+    <div class="poi-item" onclick="focusOnMarker(2)">
+      <div>
+        <h3><i class="fas fa-place-of-worship"></i> Torre de Londres</h3>
+        <p>Fortaleza histórica y hogar de las joyas de la corona.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="2">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        // Puntos de interés con información detallada
-        const pointsOfInterest = [
-            {
-                name: "Palacio de Buckingham",
-                coords: [51.5014, -0.1419],
-                description: "La residencia oficial de la monarquía británica en Londres. Construido en 1703, ha sido el hogar de los reyes y reinas desde 1837.",
-                info: "🎫 Entrada: £30 | ⏰ Mejor hora: 10:30 AM | 🚇 Estación: Victoria"
-            },
-            {
-                name: "Big Ben y el Parlamento",
-                coords: [51.5007, -0.1246],
-                description: "El reloj más famoso del mundo y sede del Parlamento británico. El nombre 'Big Ben' se refiere en realidad a la campana del reloj.",
-                info: "📸 Fotos: Mejor desde Westminster Bridge | 🚇 Estación: Westminster"
-            },
-            {
-                name: "Torre de Londres",
-                coords: [51.5081, -0.0759],
-                description: "Fortaleza histórica fundada por Guillermo el Conquistador en 1066. Hogar de las joyas de la corona y famosa prisión real.",
-                info: "🎫 Entrada: £29.90 | ⏰ Duración tour: 3 horas | 🚇 Estación: Tower Hill"
-            },
-            {
-                name: "Tower Bridge",
-                coords: [51.5055, -0.0754],
-                description: "Puente levadizo construido entre 1886 y 1894. Uno de los símbolos más reconocibles de Londres.",
-                info: "🎫 Exhibition: £12.30 | 🚇 Estación: Tower Hill | 📸 Mejores fotos: South Bank"
-            },
-            {
-                name: "Museo Británico",
-                coords: [51.5194, -0.1270],
-                description: "Museo de historia y cultura con más de 8 millones de objetos. Hogar de la Piedra Rosetta y otros tesoros mundiales.",
-                info: "🎫 Gratis | ⏰ 10:00 - 17:00 | 🚇 Estación: Tottenham Court Road"
-            },
-            {
-                name: "Harrods",
-                coords: [51.4994, -0.1634],
-                description: "Centro comercial de lujo fundado en 1834. Conocido por su decoración navideña y su sección de alimentos.",
-                info: "🛍️ Abierto: 10:00 - 21:00 | 🚇 Estación: Knightsbridge | 💳 Dress code smart casual"
-            },
-            {
-                name: "Shakespeare's Globe",
-                coords: [51.5081, -0.0972],
-                description: "Teatro reconstruido al estilo isabelino donde se representan obras de Shakespeare como en su época.",
-                info: "🎫 Tours: £17 | 🎭 Obras: £5-£45 | 🚇 Estación: London Bridge"
-            },
-            {
-                name: "London Eye",
-                coords: [51.5033, -0.1196],
-                description: "Noria gigante de 135 metros de altura con 32 cápsulas. Vista panorámica de 360° de Londres.",
-                info: "🎫 Entrada: £31 | ⏰ Duración: 30 min | 🚇 Estación: Waterloo"
-            },
-            {
-                name: "Catedral de San Pablo",
-                coords: [51.5138, -0.0983],
-                description: "Catedral anglicana diseñada por Sir Christopher Wren. Famosa por su cúpula y su Whispering Gallery.",
-                info: "🎫 Entrada: £20 | ⏰ 8:30 - 16:00 | 🚇 Estación: St. Paul's"
-            },
-            {
-                name: "Camden Lock",
-                coords: [51.5390, -0.1426],
-                description: "Mercado alternativo junto al canal Regent's Canal. Conocido por su música en vivo y ambiente bohemio.",
-                info: "🎫 Gratis | 🍔 Street Food | 🚇 Estación: Camden Town"
-            },
-            {
-                name: "Stay at Safestay London Elephant & Castle",
-                coords: [51.4945, -0.1003],
-                description: "Alojamiento económico y moderno en el corazón de Londres, ideal para viajeros jóvenes.",
-                info: "💰 Precio por noche: Desde £25 | 🚇 Estación: Elephant & Castle"
-            },
-            {
-                name: "Natural History Museum",
-                coords: [51.4967, -0.1764],
-                description: "Museo dedicado a la historia natural, famoso por su colección de dinosaurios y su arquitectura impresionante.",
-                info: "🎫 Gratis | ⏰ 10:00 - 17:30 | 🚇 Estación: South Kensington"
-            }
-        ];
+    <div class="poi-item" onclick="focusOnMarker(3)">
+      <div>
+        <h3><i class="fas fa-bridge"></i> Tower Bridge</h3>
+        <p>Puente levadizo con vistas al Támesis.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="3">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        const eatingPlaces = [
-            {
-                name: "Camden Market",
-                coords: [51.5416, -0.1420],
-                description: "Mercado vibrante con una gran variedad de puestos de comida internacional y opciones veganas.",
-                info: "🍴 Opciones veganas disponibles | ⏰ Abierto 10:00 - 18:00 | 🚇 Estación: Camden Town"
-            },
-            {
-                name: "Kung Fu Burger",
-                coords: [51.5120, -0.0905],
-                description: "Restaurante de hamburguesas con opciones vegetarianas y veganas, ubicado cerca de la Torre de Londres.",
-                info: "Precios: £5-£10 | 🍔 Opciones veganas disponibles | ⏰ Abierto 12:00 - 22:00 | 🚇 Estación: Tower Hill"
-            },
-            {
-                name: "JI chicken shop",
-                coords: [51.5155, -0.0722],
-                description: "Famoso por su pollo frito estilo coreano, con opciones vegetarianianas.",
-                info: "Precios: £7-£12 | 🍗 Opciones vegetarianas disponibles | ⏰ Abierto 12:00 - 22:00 | 🚇 Estación: London Bridge"
-            }
-        ];
+    <div class="poi-item" onclick="focusOnMarker(4)">
+      <div>
+        <h3><i class="fas fa-museum"></i> Museo Británico</h3>
+        <p>Tesoros de la historia mundial.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="4">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        let markers = [];
-        let foodMarkers = [];
-        const markerNormalIcon = L.divIcon({
-            html: '<div style="background: #667eea; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);"><i class="fas fa-map-marker-alt"></i></div>',
-            className: 'custom-marker',
-            iconSize: [30, 30]
-        });
+    <div class="poi-item" onclick="focusOnMarker(11)">
+      <div>
+        <h3><i class="fas fa-tree"></i> Natural History Museum</h3>
+        <p>Famoso por su colección de dinosaurios.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="11">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        // Añadir marcadores al mapa
-        pointsOfInterest.forEach((poi, index) => {
-            const marker = L.marker(poi.coords, { icon: markerNormalIcon }).addTo(map);
-            
-            const popupContent = `
-                <div class="popup-title">${poi.name}</div>
-                <div class="popup-description">${poi.description}</div>
-                <div class="popup-info">${poi.info}</div>
-            `;
-            
-            marker.bindPopup(popupContent, {
-                maxWidth: 300,
-                className: 'custom-popup'
-            });
-            
-            markers.push(marker);
-        });
+    <div class="poi-item" onclick="focusOnMarker(5)">
+      <div>
+        <h3><i class="fas fa-shopping-bag"></i> Harrods</h3>
+        <p>El centro comercial más lujoso de Londres.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="5">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        const foodIcon = L.divIcon({
-            html: '<div style="background: #ea6666; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(244, 162, 97, 0.5);"><i class="fas fa-utensils"></i></div>',
-            className: 'custom-marker',
-            iconSize: [30, 30]
-        });
+    <div class="poi-item" onclick="focusOnMarker(6)">
+      <div>
+        <h3><i class="fas fa-theater-masks"></i> Shakespeare's Globe</h3>
+        <p>Teatro reconstruido al estilo isabelino.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="6">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        eatingPlaces.forEach((place) => {
-            const marker2 = L.marker(place.coords, { icon: foodIcon }).addTo(map);
-            
-            const popupContent = `
-                <div class="popup-title">${place.name}</div>
-                <div class="popup-description">${place.description}</div>
-                <div class="popup-info">${place.info}</div>
-            `;
+    <div class="poi-item" onclick="focusOnMarker(7)">
+      <div>
+        <h3><i class="fas fa-eye"></i> London Eye</h3>
+        <p>Noria gigante con vistas panorámicas.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="7">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-            marker2.bindPopup(popupContent, {
-                maxWidth: 300,
-                className: 'custom-popup'
-            });
-            foodMarkers.push(marker2);
-        });
+    <div class="poi-item" onclick="focusOnMarker(8)">
+      <div>
+        <h3><i class="fas fa-cathedral"></i> Catedral de San Pablo</h3>
+        <p>Cúpula icónica de Sir Christopher Wren.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="8">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        // Añadir efectos visuales
-        map.on('zoomend', function() {
-            const currentZoom = map.getZoom();
-            markers.forEach(marker => {
-                const icon = marker.getIcon();
-                if (currentZoom > 15) {
-                    marker.setIcon(L.divIcon({
-                        html: '<div style="background: #667eea; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);"><i class="fas fa-map-marker-alt"></i></div>',
-                        className: 'custom-marker',
-                        iconSize: [30, 30]
-                    }));
-                } else {
-                    marker.setIcon(L.divIcon({
-                        html: '<div style="background: #667eea; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 10px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);"><i class="fas fa-map-marker-alt"></i></div>',
-                        className: 'custom-marker',
-                        iconSize: [40, 40]
-                    }));
-                }
-            });
-            foodMarkers.forEach(marker2 => {
-                const icon2 = marker2.getIcon();
-                if (currentZoom > 15) {
-                    marker2.setIcon(L.divIcon({
-                        html: '<div style="background: #ea6666; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(244, 162, 97, 0.5);"><i class="fas fa-utensils"></i></div>',
-                        className: 'custom-marker',
-                        iconSize: [30, 30]
-                    }));
-                } else {
-                    marker2.setIcon(L.divIcon({
-                        html: '<div style="background: #ea6666; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 10px; box-shadow: 0 2px 8px rgba(244, 162, 97, 0.4);"><i class="fas fa-utensils"></i></div>',
-                        className: 'custom-marker',
-                        iconSize: [30, 30]
-                    }));
-                }
-            });
-        });
+    <div class="poi-item" onclick="focusOnMarker(9)">
+      <div>
+        <h3><i class="fas fa-water"></i> Camden Lock</h3>
+        <p>Mercado alternativo junto al canal.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="9">
+        <span class="slider"></span>
+      </label>
+    </div>
 
-        // Inicializar con zoom moderado
-        map.setZoom(12);
+    <!-- COMIDA: data-type = 'food', índices 0-based para eatingPlaces -->
+    <h2 style="margin-top:8px;"><i class="fas fa-utensils"></i> Comer</h2>
 
-        // Añadir control de geolocalización (solo si el usuario lo permite)
-        if (navigator.geolocation) {
-            const locationButton = L.control({position: 'topright'});
-            locationButton.onAdd = function() {
-                const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
-                div.innerHTML = '<button style="background: white; border: none; padding: 8px; cursor: pointer; border-radius: 4px; box-shadow: 0 1px 5px rgba(0,0,0,0.65);"><i class="fas fa-location-arrow" style="color: #667eea;"></i></button>';
-                div.onclick = function() {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        const userLat = position.coords.latitude;
-                        const userLng = position.coords.longitude;
-                        
-                        // Verificar si está en Londres (aproximadamente)
-                        if (userLat > 51.4 && userLat < 51.6 && userLng > -0.3 && userLng < 0.1) {
-                            map.setView([userLat, userLng], 15);
-                            L.marker([userLat, userLng])
-                                .addTo(map)
-                                .bindPopup('📍 Tu ubicación actual')
-                                .openPopup();
-                        } else {
-                            const msg = L.control({position:'topright'});
-                            msg.onAdd = () => {
-                              const div = L.DomUtil.create('div','leaflet-control leaflet-bar');
-                              div.innerHTML = '<div style="background:#fff;padding:8px;border-radius:4px;">No estás en Londres</div>';
-                              setTimeout(() => msg.remove(), 2500);
-                              return div;
-                            };
-                            msg.addTo(map);
-                            map.setView([51.5074, -0.1278], 12);
-                        }
-                    });
-                };
-                return div;
-            };
-            locationButton.addTo(map);
+    <div class="food-item" onclick="focusOnFoodMarker(0)">
+      <div>
+        <h3><i class="fas fa-store"></i> Camden Market</h3>
+        <p>Puestos variados con mucha comida internacional.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="food" data-index="0">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="food-item" onclick="focusOnFoodMarker(1)">
+      <div>
+        <h3><i class="fas fa-hamburger"></i> Kung Fu Burger</h3>
+        <p>Hamburguesas con opciones vegetarianas.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="food" data-index="1">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="food-item" onclick="focusOnFoodMarker(2)">
+      <div>
+        <h3><i class="fas fa-drumstick-bite"></i> JI chicken shop</h3>
+        <p>Pollo frito estilo coreano, con alternativas.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="food" data-index="2">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Inicializar mapa
+    const map = L.map('map').setView([51.5074, -0.1278], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // ICONOS
+    const markerNormalIcon = L.divIcon({
+      html: '<div style="background: #667eea; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);"><i class="fas fa-map-marker-alt"></i></div>',
+      className: 'custom-marker',
+      iconSize: [30,30]
+    });
+
+    const foodIcon = L.divIcon({
+      html: '<div style="background: #ea6666; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(244, 162, 97, 0.5);"><i class="fas fa-utensils"></i></div>',
+      className: 'custom-marker',
+      iconSize: [30,30]
+    });
+
+    // Datos
+    const pointsOfInterest = [
+      { name: "Palacio de Buckingham", coords: [51.5014, -0.1419], description: "La residencia oficial ...", info: "🎫 Entrada: £30 | 🚇 Victoria" },
+      { name: "Big Ben y el Parlamento", coords: [51.5007, -0.1246], description: "El reloj más famoso ...", info: "📸 Desde Westminster | 🚇 Westminster" },
+      { name: "Torre de Londres", coords: [51.5081, -0.0759], description: "Fortaleza histórica ...", info: "🎫 £29.90 | 🚇 Tower Hill" },
+      { name: "Tower Bridge", coords: [51.5055, -0.0754], description: "Puente levadizo ...", info: "🎫 Exhibition: £12.30 | 🚇 Tower Hill" },
+      { name: "Museo Británico", coords: [51.5194, -0.1270], description: "Museo con millones de objetos ...", info: "🎫 Gratis | ⏰ 10:00-17:00" },
+      { name: "Harrods", coords: [51.4994, -0.1634], description: "Centro comercial de lujo ...", info: "🛍️ 10:00-21:00 | 🚇 Knightsbridge" },
+      { name: "Shakespeare's Globe", coords: [51.5081, -0.0972], description: "Teatro reconstruido ...", info: "🎫 Tours: £17 | 🚇 London Bridge" },
+      { name: "London Eye", coords: [51.5033, -0.1196], description: "Noria gigante ...", info: "🎫 £31 | ⏰ 30 min | 🚇 Waterloo" },
+      { name: "Catedral de San Pablo", coords: [51.5138, -0.0983], description: "Catedral de Sir Christopher Wren ...", info: "🎫 £20 | 🚇 St. Paul's" },
+      { name: "Camden Lock", coords: [51.5390, -0.1426], description: "Mercado junto al canal ...", info: "🎫 Gratis | 🚇 Camden Town" },
+      { name: "Stay at Safestay London Elephant & Castle", coords: [51.4945, -0.1003], description: "Alojamiento económico ...", info: "💰 Desde £25 | 🚇 Elephant & Castle" },
+      { name: "Natural History Museum", coords: [51.4967, -0.1764], description: "Museo de historia natural ...", info: "🎫 Gratis | ⏰ 10:00-17:30 | 🚇 South Kensington" }
+    ];
+
+    const eatingPlaces = [
+      { name: "Camden Market", coords: [51.5416, -0.1420], description: "Mercado vibrante ...", info: "🍴 Opciones veganas | ⏰ 10:00-18:00" },
+      { name: "Kung Fu Burger", coords: [51.5120, -0.0905], description: "Hamburguesas ...", info: "Precios: £5-£10 | 🚇 Tower Hill" },
+      { name: "JI chicken shop", coords: [51.5155, -0.0722], description: "Pollo frito coreano ...", info: "Precios: £7-£12 | 🚇 London Bridge" }
+    ];
+
+    // Arrays para almacenar marcadores
+    const markers = [];
+    const foodMarkers = [];
+
+    // Añadir POIs
+    pointsOfInterest.forEach((poi, idx) => {
+      const mk = L.marker(poi.coords, { icon: markerNormalIcon }).addTo(map);
+      mk.bindPopup(`<div class="popup-title">${poi.name}</div><div class="popup-description">${poi.description}</div><div class="popup-info">${poi.info}</div>`, { maxWidth: 300, className: 'custom-popup' });
+      markers.push(mk);
+    });
+
+    // Añadir sitios de comida
+    eatingPlaces.forEach((place, idx) => {
+      const mk = L.marker(place.coords, { icon: foodIcon }).addTo(map);
+      mk.bindPopup(`<div class="popup-title">${place.name}</div><div class="popup-description">${place.description}</div><div class="popup-info">${place.info}</div>`, { maxWidth: 300, className: 'custom-popup' });
+      foodMarkers.push(mk);
+    });
+
+    // Zoom effect (ajusta iconos si quieres)
+    map.on('zoomend', () => {
+      const z = map.getZoom();
+      // aquí podrías variar iconSize o clases si lo deseas
+    });
+
+    // Focus helpers
+    function focusOnMarker(index) {
+      const target = markers[index];
+      if (!target) return;
+      const latLng = target.getLatLng();
+      map.setView(latLng, 16);
+      target.openPopup();
+      if (window.innerWidth <= 768) document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function focusOnFoodMarker(index) {
+      const target = foodMarkers[index];
+      if (!target) return;
+      const latLng = target.getLatLng();
+      map.setView(latLng, 16);
+      target.openPopup();
+      if (window.innerWidth <= 768) document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Checkboxes: toggling de marcadores
+    document.querySelectorAll('.check').forEach(chk => {
+      // aseguramos que el checked inicial refleja el estado en el mapa (todos añadidos arriba)
+      chk.addEventListener('change', (e) => {
+        const marker = getMarkerFromCheckbox(chk);
+        if (!marker) return;
+        if (chk.checked) {
+          map.removeLayer(marker);
+        } else {
+          map.addLayer(marker);
         }
-        function focusOnFoodMarker(index) {
-            let targetMarker = null;
+      });
+    });
 
-            // Buscar en marcadores de comida
-            if (index < foodMarkers.length) {
-                targetMarker = foodMarkers[index];
+    function getMarkerFromCheckbox(chk) {
+      const type = chk.dataset.type;
+      const idx = Number(chk.dataset.index);
+      if (type === 'poi') {
+        return markers[idx];
+      } else if (type === 'food') {
+        return foodMarkers[idx];
+      }
+      return null;
+    }
+
+    // Control de geolocalización (control de Leaflet)
+    if (navigator.geolocation) {
+      const locationControl = L.control({ position: 'topright' });
+      locationControl.onAdd = function() {
+        const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+        div.style.background = '#fff'; div.style.padding = '6px'; div.style.borderRadius = '4px';
+        div.style.boxShadow = '0 1px 5px rgba(0,0,0,0.15)';
+        div.innerHTML = '<button title="Mi ubicación" style="background:none;border:none;cursor:pointer;"><i class="fas fa-location-arrow" style="color:#667eea;"></i></button>';
+        L.DomEvent.disableClickPropagation(div);
+        div.addEventListener('click', () => {
+          navigator.geolocation.getCurrentPosition(pos => {
+            const userLat = pos.coords.latitude;
+            const userLng = pos.coords.longitude;
+            // Comprobar aproximación a Londres
+            if (userLat > 51.2 && userLat < 51.7 && userLng > -0.5 && userLng < 0.3) {
+              map.setView([userLat, userLng], 15);
+              const um = L.circleMarker([userLat, userLng], { radius:6, fillColor:'#2b9df4', fillOpacity:1, stroke:false }).addTo(map);
+              um.bindPopup('📍 Tu ubicación actual').openPopup();
+              setTimeout(() => { if (map.hasLayer(um)) map.removeLayer(um); }, 6000);
+            } else {
+              // Mensaje rápido
+              const tempMsg = L.control({ position:'topright' });
+              tempMsg.onAdd = () => {
+                const d = L.DomUtil.create('div','leaflet-control leaflet-bar');
+                d.innerHTML = '<div style="background:#fff;padding:8px;border-radius:4px;">No estás en Londres</div>';
+                setTimeout(() => tempMsg.remove(), 2200);
+                return d;
+              };
+              tempMsg.addTo(map);
+              map.setView([51.5074, -0.1278], 12);
             }
-
-            if (targetMarker) {
-                const latLng = targetMarker.getLatLng();
-                map.setView(latLng, 16);
-                targetMarker.openPopup();
-
-                // Scroll suave en móviles
-                if (window.innerWidth <= 768) {
-                    document.getElementById('map').scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                }
-            }
-        }
-        function focusOnMarker(index) {
-            let targetMarker = null;
-
-            // Buscar en marcadores normales
-            if (index < markers.length) {
-                targetMarker = markers[index];
-            }
-
-            if (targetMarker) {
-                const latLng = targetMarker.getLatLng();
-                map.setView(latLng, 16);
-                targetMarker.openPopup();
-
-                // Scroll suave en móviles
-                if (window.innerWidth <= 768) {
-                    document.getElementById('map').scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                }
-            }
-            
-        }
-
-        document.querySelectorAll('.toggle-xmas').forEach(label => {
-          label.addEventListener('click', () => {
-            setTimeout(() => {               // esperamos a que cambie el check
-              const chk  = label.querySelector('.check');
-              const idx  = Number(chk.dataset.index);
-              const target = idx < markers.length
-                           ? markers[idx - 1]
-                           : foodMarkers[idx - 100];
-            
-              if (target) {
-                chk.checked ? map.removeLayer(target)
-                            : map.addLayer(target);
-              }
-            }, 0);
+          }, err => {
+            alert('No se pudo acceder a la geolocalización: ' + (err.message || err));
           });
         });
+        return div;
+      };
+      locationControl.addTo(map);
+    }
 
-        div.innerHTML = `
-        <button style="background:#fff;border:none;padding:10px;font-size:18px;
-                       cursor:pointer;border-radius:50%;box-shadow:0 1px 5px rgba(0,0,0,.3);
-                       width:44px;height:44px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-location-arrow" style="color:#667eea;"></i>
-        </button>`;
+    // Menu toggle
+    const btnMenu = document.getElementById('btnMenu');
+    const sidePanel = document.getElementById('sidebar');
+    btnMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sidePanel.classList.toggle('open');
+    });
+    // cerrar al tocar fuera
+    document.addEventListener('click', e => {
+      if (!sidePanel.contains(e.target) && e.target !== btnMenu) sidePanel.classList.remove('open');
+    });
 
-        console.log('🗺️ Mapa de Londres cargado con éxito!');
-        console.log('📍 Total de puntos de interés:', pointsOfInterest.length);
-    </script>
+    console.log('🗺️ Mapa de Londres cargado con éxito!');
+    console.log('📍 Total POIs:', pointsOfInterest.length, ' — Comida:', eatingPlaces.length);
+  </script>
 </body>
 </html>
