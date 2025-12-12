@@ -175,6 +175,24 @@
         coords: [51.5100, -0.1337],
         description: "Tienda temática de m&m's con una amplia variedad de productos y dulces.",
         info: "🍬 Dulces y productos temáticos | ⏰ Abierto 10:00 - 22:00 | 🚇 Estación: Leicester Square"
+      },
+      {
+        name: "sky garden",
+        coords: [51.5125, -0.0837],
+        description: "Jardín público en la cima de un rascacielos con vistas panorámicas de Londres.",
+        info: "🎫 Gratis (reserva previa) | ⏰ 10:00-18:00 | 🚇 Estación: Monument"
+      },
+      {
+        name: "the garden at 120",
+        coords: [51.5116, -0.0905],
+        description: "Terraza jardín con vistas impresionantes de la ciudad.",
+        info: "🎫 Desde £10 | ⏰ 10:00-22:00 | 🚇 Estación: Bank"
+      },
+      {
+        name: "rooftop one new change",
+        coords: [51.5133, -0.0983],
+        description: "Terraza en la azotea con vistas a la Catedral de San Pablo y la ciudad.",
+        info: "🍹 Bares y restaurantes | ⏰ 11:00-23:00 | 🚇 Estación: St. Paul's"
       }
     ];
 
@@ -193,13 +211,13 @@
       },
       { 
         name: "JI chicken shop", 
-        coords: [51.5155, -0.0722], 
+        coords: [51.5133032,-0.1822979], 
         description: "Famoso por su pollo frito estilo coreano, con opciones vegetarianianas.", 
         info: "Precios: £7-£12 | 🍗 Opciones vegetarianas disponibles | ⏰ Abierto 12:00 - 22:00 | 🚇 Estación: London Bridge"
       },
       {
         name: "Lee's Fish & Chips",
-        coords: [51.5079, -0.1280],
+        coords: [51.495638,-0.1386907],
         description: "Clásico fish and chips británico en el corazón de Londres.",
         info: "Precios: £6-£12 | 🍽️ Clásico británico | ⏰ Abierto 11:00 - 21:00 | 🚇 Estación: Charing Cross"
       }
