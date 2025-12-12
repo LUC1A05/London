@@ -241,6 +241,8 @@
       foodMarkers.push(mk);
     });
 
+    restoreCheckboxState();
+
     // Zoom effect (ajusta iconos si quieres)
     map.on('zoomend', () => {
       const z = map.getZoom();
@@ -277,6 +279,7 @@
         } else {
           map.addLayer(marker);
         }
+        saveCheckboxState();
       });
     });
     
