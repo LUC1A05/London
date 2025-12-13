@@ -346,6 +346,17 @@
       </label>
     </div>
 
+    <div class="poi-item" onclick="focusOnMarker(29)">
+      <div>
+        <h3><i class="fas fa-train"></i> Platform 9 3/4</h3>
+        <p>Lugar icónico para los fans de Harry Potter, con un carrito de equipaje que parece desaparecer en la pared.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="poi" data-index="29">
+        <span class="slider"></span>
+      </label>
+    </div>
+
     <!-- COMIDA: data-type = 'food', índices 0-based para eatingPlaces -->
     <h2 style="margin-top:8px;"><i class="fas fa-utensils"></i> Comer</h2>
 
@@ -391,6 +402,31 @@
           <input type="checkbox" class="check" data-type="food" data-index="3">
           <span class="slider"></span>
         </label>
+    </div>
+
+    <!--Nightlife-->
+    <h2 style="margin-top:8px;"><i class="fas fa-cocktail"></i> Vida Nocturna</h2>
+    
+    <div class="night-item" onclick="focusOnNightlifeMarker(0)">
+      <div>
+        <h3><i class="fas fa-music"></i> Jazz Cafe</h3>
+        <p>Club de jazz icónico con música en vivo y ambiente vibrante.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="nightlife" data-index="0">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="night-item" onclick="focusOnNightlifeMarker(1)">
+      <div>
+        <h3><i class="fas fa-cocktail"></i> sweeties</h3>
+        <p>Bar de cócteles con ambiente acogedor y una amplia selección de bebidas.</p>
+      </div>
+      <label class="toggle-xmas">
+        <input type="checkbox" class="check" data-type="nightlife" data-index="1">
+        <span class="slider"></span>
+      </label>
     </div>
 
   </div>

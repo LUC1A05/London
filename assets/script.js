@@ -18,6 +18,12 @@
       iconSize: [30,30]
     });
 
+    const nightIcon = L.divIcon({
+      html: '<div style="background: #feee09ed; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 2px 10px rgba(255, 213, 4, 0.88);"><i class="fas fa-champagne-glasses"></i></div>',
+      className: 'custom-marker',
+      iconSize: [30,30]
+    });
+
     // Datos
     const pointsOfInterest = [
       { 
@@ -193,6 +199,12 @@
         coords: [51.5133, -0.0983],
         description: "Terraza en la azotea con vistas a la Catedral de San Pablo y la ciudad.",
         info: "🍹 Bares y restaurantes | ⏰ 11:00-23:00 | 🚇 Estación: St. Paul's"
+      },
+      {
+        name: "Platform 9 3/4",
+        coords: [51.5313, -0.1246],
+        description: "Lugar icónico para los fans de Harry Potter, con un carrito de equipaje que parece desaparecer en la pared.",
+        info: "📸 Fotos: Gratis | 🎫 Tienda: Desde £10 | 🚇 Estación: King's Cross"
       }
     ];
 
@@ -223,9 +235,25 @@
       }
     ];
 
+    const nightPlaces = [
+      {
+        name: "Jazz Cafe Camden",
+        coords: [51.5411, -0.1425],
+        description: "Lugar emblemático para música en vivo, especialmente jazz y soul.",
+        info: "🎶 Música en vivo | ⏰ Varía según el evento | 🚇 Estación: Camden Town"
+      },
+      {
+        name: "sweeties",
+        coords: [51.5127, -0.1339],
+        description: "Bar de cócteles con ambiente acogedor y una amplia selección de bebidas.",
+        info: "🍸 Cócteles variados | ⏰ Abierto 18:00 - 01:00 | 🚇 Estación: Leicester Square"
+      }
+    ];
+
     // Arrays para almacenar marcadores
     const markers = [];
     const foodMarkers = [];
+    const nightMarkers = [];
 
     // Añadir POIs
     pointsOfInterest.forEach((poi, idx) => {
@@ -239,6 +267,12 @@
       const mk = L.marker(place.coords, { icon: foodIcon }).addTo(map);
       mk.bindPopup(`<div class="popup-title">${place.name}</div><div class="popup-description">${place.description}</div><div class="popup-info">${place.info}</div>`, { maxWidth: 300, className: 'custom-popup' });
       foodMarkers.push(mk);
+    });
+
+    nightPlaces.forEach((place, idx) => {
+      const mk = L.marker(place.coords, { icon: nightIcon }).addTo(map);
+      mk.bindPopup(`<div class="popup-title">${place.name}</div><div class="popup-description">${place.description}</div><div class="popup-info">${place.info}</div>`, { maxWidth: 300, className: 'custom-popup' });
+      nightMarkers.push(mk);
     });
 
     restoreCheckboxState();
@@ -268,6 +302,15 @@
       if (window.innerWidth <= 768) document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
+    function focusOnNightMarker(index) {
+      const target = nightMarkers[index];
+      if (!target) return;
+      const latLng = target.getLatLng();
+      map.setView(latLng, 16);
+      target.openPopup();
+      if (window.innerWidth <= 768) document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     // Checkboxes: toggling de marcadores
     document.querySelectorAll('.check').forEach(chk => {
       // aseguramos que el checked inicial refleja el estado en el mapa (todos añadidos arriba)
@@ -290,6 +333,8 @@
         return markers[idx];
       } else if (type === 'food') {
         return foodMarkers[idx];
+      } else if (type === 'night') {
+        return nightMarkers[idx];
       }
       return null;
     }
