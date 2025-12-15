@@ -96,7 +96,7 @@
         name: "Natural History Museum", 
         coords: [51.4967, -0.1764], 
         description: "Museo dedicado a la historia natural, famoso por su colección de dinosaurios y su arquitectura impresionante. ", 
-        info: "🎫 Gratis | ⏰ 10:00-17:30 | 🚇 South Kensington" 
+        info: "🎫 Gratis: Entradas el 20 a las 12:15 | ⏰ 10:00-17:30 | 🚇 South Kensington" 
       },
       {
         name: "Portobello market",
@@ -205,6 +205,126 @@
         coords: [51.5313, -0.1246],
         description: "Lugar icónico para los fans de Harry Potter, con un carrito de equipaje que parece desaparecer en la pared.",
         info: "📸 Fotos: Gratis | 🎫 Tienda: Desde £10 | 🚇 Estación: King's Cross"
+      },
+      {
+        name: "Greenwich Park",
+        coords: [51.4769, -0.0005],
+        description: "Parque histórico con vistas panorámicas de Londres y el meridiano cero.",
+        info: "🌳 Ideal para pasear | 🚇 Estación: Cutty Sark"
+      },
+      {
+        name: "University of greenwich",
+        coords: [51.4820, 0.0052],
+        description: "Campus universitario con arquitectura histórica y vistas al río Támesis.",
+        info: "🎓 Campus histórico | 🚇 Estación: Cutty Sark"
+      },
+      {
+        name: "Wood Wharf",
+        coords: [51.4874918,-0.0586797],
+        description: "Área moderna junto al río con restaurantes, tiendas y espacios verdes.",
+        info: "🍽️ Restaurantes y cafés | 🚇 Estación: Canary Wharf"
+      },
+      {
+        name: "York Road",
+        coords: [51.5035, -0.1150],
+        description: "Calle con vistas al río Támesis y al London Eye, ideal para pasear y tomar fotos.",
+        info: "📸 Fotos: Vistas al río | 🚇 Estación: Waterloo"
+      },
+      {
+        name: "Solane Square",
+        coords: [51.5122, -0.0901],
+        description: "Plaza moderna con arquitectura contemporánea y espacios verdes.",
+        info: "📸 Fotos: Arquitectura moderna | 🚇 Estación: Monument"
+      },
+      {
+        name: "87 christophers place",
+        coords: [51.5164, -0.1507],
+        description: "Callejón pintoresco con tiendas y cafés independientes.",
+        info: "📸 Fotos: Callejón pintoresco | 🚇 Estación: Bond Street"
+      },
+      {
+        name: "hampstead heath",
+        coords: [51.5626771,-0.1655],
+        description: "Gran parque urbano con colinas, estanques y vistas panorámicas de Londres.",
+        info: "🌳 Ideal para pasear | 🚇 Estación: Hampstead"
+      },
+      {
+        name: "St James's Park",
+        coords: [51.5020, -0.1588],
+        description: "Parque real con jardines bien cuidados, un lago y vistas al Palacio de Buckingham.",
+        info: "🌳 Ideal para pasear | 🚇 Estación: St James's Park"
+      },
+      {
+        name: "Horizon 22",
+        coords: [51.5145, -0.0855],
+        description: "Bar en la azotea con vistas panorámicas de Londres y una amplia selección de cócteles.",
+        info: "🍹 Cócteles variados | ⏰ Abierto 17:00 - 01:00 | 🚇 Estación: Bank"
+      },
+      {
+        name: "Somerset House",
+        coords: [51.511059,-0.1197176],
+        description: "Centro cultural con arquitectura neoclásica, exposiciones de arte y eventos al aire libre.",
+        info: "🎨 Exposiciones y pista de hielo | 🚇 Estación: Temple"
+      },
+      {
+        name: "new bond street",
+        coords: [51.5125, -0.1420],
+        description: "Calle comercial de lujo con tiendas de diseñadores y boutiques exclusivas.",
+        info: "🛍️ Tiendas de lujo | 🚇 Estación: Bond Street"
+      },
+      {
+        name: "Connaught village",
+        coords: [51.5142, -0.1675],
+        description: "Barrio elegante con tiendas independientes, restaurantes y un ambiente tranquilo.",
+        info: "🛍️ Tiendas y cafés | 🚇 Estación: Marble Arch"
+      },
+      {
+        name: "Burlington prade",
+        coords: [51.5098, -0.1424],
+        description: "Área comercial con tiendas de moda, galerías de arte y restaurantes.",
+        info: "🛍️ Tiendas y galerías | 🚇 Estación: Green Park"
+      },
+      {
+        name: "oxford street",
+        coords: [51.5154, -0.1410],
+        description: "Una de las calles comerciales más famosas del mundo, con una gran variedad de tiendas y grandes almacenes.",
+        info: "🛍️ Tiendas para todos los gustos | 🚇 Estación: Oxford Circus"
+      },
+      {
+        name: "knightsbridge",
+        coords: [51.4995, -0.1632],
+        description: "Barrio de lujo conocido por sus tiendas exclusivas y grandes almacenes como Harrods.",
+        info: "🛍️ Tiendas de lujo | 🚇 Estación: Knightsbridge"
+      },
+      {
+        name: "Selfridges",
+        coords: [51.5145, -0.1534],
+        description: "Grandes almacenes icónicos con una amplia gama de productos de moda, belleza y hogar.",
+        info: "🛍️ Grandes almacenes | 🚇 Estación: Bond Street"
+      },
+      {
+        name: "Bermondsey",
+        coords: [51.4976, -0.0637],
+        description: "Barrio al sureste del Támesis con mercado, cervecerías y calles tranquilas.",
+        info: "🍺 Bermondsey Beer Mile | 🚇 Estación: Bermondsey"
+      },
+      {
+        name: "Islington",
+        coords: [51.5380, -0.0998],
+        description: "Área animada con tiendas, teatros y restaurantes alrededor de Upper Street.",
+        info: "🎭 Sadler's Wells y pubs | 🚇 Estación: Angel"
+      },
+      {
+        name: "Hackney",
+        coords: [51.5450, -0.0550],
+        description: "Zona creativa con parques, cafés independientes y vida cultural.",
+        info: "🎨 Mercados y cafés | 🚇 Estación: Hackney Central"
+      },
+      {
+        name: "Stoke Newington",
+        coords: [51.5615, -0.0741],
+        description: "Barrio residencial con Church Street llena de bares y restaurantes.",
+        info: "🌳 Clissold Park cercano | 🚇 Estación: Stoke Newington"
       }
     ];
 
@@ -232,6 +352,36 @@
         coords: [51.495638,-0.1386907],
         description: "Clásico fish and chips británico en el corazón de Londres.",
         info: "Precios: £6-£12 | 🍽️ Clásico británico | ⏰ Abierto 11:00 - 21:00 | 🚇 Estación: Charing Cross"
+      },
+      {
+        name: "The black pig Borough market",
+        coords: [51.5050, -0.0915],
+        description: "Restaurante especializado en carnes y platos tradicionales británicos.",
+        info: "Precios: £10-£20 | 🥩 Carnes de calidad | ⏰ Abierto 10:00 - 17:00 | 🚇 Estación: London Bridge"
+      },
+      {
+        name: "Pastation",
+        coords: [51.5176496,-0.1490542],
+        description: "Restaurante italiano conocido por sus pastas frescas y salsas caseras.",
+        info: "Precios: £8-£15 | 🍝 Pastas frescas | ⏰ Abierto 12:00 - 22:00 | 🚇 Estación: London Bridge"
+      },
+      {
+        name: "It's bagels",
+        coords: [51.5147229,-0.1385605],
+        description: "Cafetería especializada en bagels con una variedad de rellenos y opciones vegetarianas.",
+        info: "Precios: £3-£7 | 🥯 Opciones vegetarianas | ⏰ Abierto 07:00 - 15:00 | 🚇 Estación: Liverpool Street"
+      },
+      {
+        name: "Bill's soho restaurant",
+        coords: [51.5142, -0.1315],
+        description: "Pancakes, brunch y comida británica moderna en un ambiente acogedor.",
+        info: "Precios: £10-£20 | 🥗 Opciones veganas disponibles | ⏰ Abierto 09:00 - 22:00 | 🚇 Estación: Tottenham Court Road"
+      },
+      {
+        name: "Bun House Chinatown",
+        coords: [51.5129, -0.1310],
+        description: "Restaurante especializado en dim sum y bollos al vapor, con opciones vegetarianas.",
+        info: "Precios: £5-£15 | 🥟 Opciones vegetarianas | ⏰ Abierto 11:00 - 22:00 | 🚇 Estación: Leicester Square"
       }
     ];
 
@@ -247,6 +397,72 @@
         coords: [51.5127, -0.1339],
         description: "Bar de cócteles con ambiente acogedor y una amplia selección de bebidas.",
         info: "🍸 Cócteles variados | ⏰ Abierto 18:00 - 01:00 | 🚇 Estación: Leicester Square"
+      },
+      {
+        name: "The Churchill Bar",
+        coords: [51.4995, -0.1722],
+        description: "Bar elegante con temática de Winston Churchill, conocido por sus cócteles clásicos.",
+        info: "🍹 Cócteles clásicos | ⏰ Abierto 12:00 - 23:00 | 🚇 Estación: Hyde Park Corner"
+      },
+      {
+        name: "Night tales loft",
+        coords: [51.5120, -0.0910],
+        description: "Bar en la azotea con vistas panorámicas de Londres y ambiente relajado.",
+        info: "🍻 Vistas panorámicas | ⏰ Abierto 17:00 - 01:00 | 🚇 Estación: London Bridge"
+      },
+      {
+        name: "Shoreditch Street",
+        coords: [51.5245, -0.0786],
+        description: "Zona vibrante con numerosos bares y clubes nocturnos.",
+        info: "🍸 Variedad de bares | ⏰ Abierto hasta tarde | 🚇 Estación: Shoreditch High Street"
+      },
+      {
+        name: "ministry of sound",
+        coords: [51.4950, -0.0983],
+        description: "Club nocturno icónico conocido por su música electrónica y ambiente animado.",
+        info: "🎧 Música electrónica | ⏰ Abierto hasta las 06:00 | 🚇 Estación: Elephant & Castle"
+      },
+      {
+        name: "Selene Nightclub",
+        coords: [51.5127802,-0.1446605],
+        description: "Club nocturno popular con una mezcla de música comercial y electrónica.",
+        info: "🎶 Música variada | ⏰ Abierto hasta las 04:00 | 🚇 Estación: Leicester Square"
+      },
+      {
+        name: "Soma nightjar",
+        coords: [51.5135, -0.1280],
+        description: "Bar de cócteles con ambiente íntimo y música en vivo.",
+        info: "🍸 Cócteles artesanales | ⏰ Abierto 18:00 - 02:00 | 🚇 Estación: Covent Garden"
+      },
+      {
+        name: "Tone central",
+        coords: [51.5079, -0.0907],
+        description: "Bar y club con una mezcla de música en vivo y DJ sets.",
+        info: "🎤 Música en vivo | ⏰ Abierto hasta las 03:00 | 🚇 Estación: Bank"
+      },
+      {
+        name: "Searcys at the Gherkin",
+        coords: [51.5145, -0.0803],
+        description: "Bar elegante en la cima del Gherkin con vistas impresionantes de Londres.",
+        info: "🍾 Vistas panorámicas | ⏰ Abierto 12:00 - 23:00 | 🚇 Estación: Liverpool Street"
+      },
+      {
+        name: "58th Street",
+        coords: [51.5128, -0.0917],
+        description: "Bar de cócteles con ambiente moderno y una amplia selección de bebidas.",
+        info: "🍹 Cócteles variados | ⏰ Abierto 17:00 - 01:00 | 🚇 Estación: London Bridge"
+      },
+      {
+        name: "Mile End tube",
+        coords: [51.5255, -0.0333],
+        description: "Bar y club con una mezcla de música en vivo y DJ sets.",
+        info: "🎤 Música en vivo | ⏰ Abierto hasta las 03:00 | 🚇 Estación: Mile End"
+      },
+      {
+        name: "Paradise Under the stars",
+        coords: [51.5074, -0.1278],
+        description: "Bar al aire libre con vistas panorámicas de Londres y ambiente relajado.",
+        info: "🍻 Vistas panorámicas | ⏰ Abierto 17:00 - 01:00 | 🚇 Estación: Charing Cross"
       }
     ];
 
